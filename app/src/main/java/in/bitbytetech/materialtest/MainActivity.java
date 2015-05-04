@@ -17,6 +17,8 @@ public class MainActivity extends ActionBarActivity {
 
         Toolbar toolBar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolBar);
+
+        NavigationDrawerFragment drawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
     }
 
     @Override
