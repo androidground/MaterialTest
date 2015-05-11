@@ -1,10 +1,16 @@
-<RelativeLayoutLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FB8C00"
     tools:context="in.bitbytetech.materialtest.NavigationDrawerFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</RelativeLayoutLayout>
+    <ImageView
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_marginBottom="16dp"
+        android:layout_width="280dp"
+        android:layout_height="140dp"
+        android:src="@drawable/ic_abstract"/>
+
+</RelativeLayout>

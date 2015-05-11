@@ -6,14 +6,15 @@
     </style>
 
     <style name="AppTheme.Base" parent="Theme.AppCompat.NoActionBar">
-        <item name="colorPrimary">@color/primaryColor</item>
-        <item name="colorPrimaryDark">@color/primaryColorDark</item>
-        <item name="colorAccent">@color/accentColor</item>
+        <item name="colorPrimary">@color/primaryColorIndigo</item>
+        <item name="colorPrimaryDark">@color/primaryColorIndigoDark</item>
+        <item name="colorAccent">@color/accentIndigoColor</item>
     </style>
 
     <style name="MyCustomToolbarTheme" parent="ThemeOverlay.AppCompat.Light">
         <item name="android:textColorPrimary">#F6F5AE</item>
-        <item name="android:textColorSecondary">#5B2333</item>
+        <!--<item name="android:textColorSecondary">#5B2333</item>-->
+        <item name="android:textColorSecondary">#F6F5AE</item>
     </style>
 
 </resources>
