@@ -8,12 +8,16 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -32,6 +36,8 @@ public class NavigationDrawerFragment extends Fragment {
     private boolean mFromSavedInstanceState;
 
     private View containerView;
+
+    private BbtAdapter bbtAdapter;
 
     public NavigationDrawerFragment() {
         // Required empty public constructor
@@ -53,7 +59,23 @@ public class NavigationDrawerFragment extends Fragment {
         // Inflate the layout for this fragment
         View layout = inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
         recyclerView = (RecyclerView) layout.findViewById(R.id.drawerList);
+        bbtAdapter = new BbtAdapter(getActivity(), getData());
+        recyclerView.setAdapter(bbtAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         return layout;
+    }
+
+    public static List<Information> getData() {
+        List<Information> data = new ArrayList<>();
+        int[] icons = {R.drawable.ic_number1, R.drawable.ic_number2, R.drawable.ic_number3, R.drawable.ic_number4};
+        String[] titles = {"Vishal", "Preeti", "Mishika", "Soumya"};
+        for (int i=0; i<icons.length && i<titles.length;i++) {
+            Information information = new Information();
+            information.iconId = icons[i];
+            information.title = titles[i];
+            data.add(information);
+        }
+        return data;
     }
 
     public void setUp(int fragementId, DrawerLayout drawerLayout, final Toolbar toolbar) {
