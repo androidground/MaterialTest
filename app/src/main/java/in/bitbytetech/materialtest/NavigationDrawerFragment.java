@@ -47,7 +47,7 @@ public class NavigationDrawerFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mUserLearnedDrawer = Boolean.valueOf(readFromPreferences(getActivity(), KEY_USER_LEARNED_DRAWER, "false"));
-
+        Log.d("BBT:", "SavedInstanceState: " + savedInstanceState);
         if ( savedInstanceState != null ) {
             mFromSavedInstanceState = true;
         }
@@ -69,10 +69,11 @@ public class NavigationDrawerFragment extends Fragment {
         List<Information> data = new ArrayList<>();
         int[] icons = {R.drawable.ic_number1, R.drawable.ic_number2, R.drawable.ic_number3, R.drawable.ic_number4};
         String[] titles = {"Vishal", "Preeti", "Mishika", "Soumya"};
-        for (int i=0; i<icons.length && i<titles.length;i++) {
+        //for (int i=0; i<icons.length && i<titles.length;i++) {
+        for (int i=0;i<100;i++) {
             Information information = new Information();
-            information.iconId = icons[i];
-            information.title = titles[i];
+            information.iconId = icons[i%icons.length];
+            information.title = titles[i%titles.length];
             data.add(information);
         }
         return data;
@@ -101,7 +102,7 @@ public class NavigationDrawerFragment extends Fragment {
             @Override
             public void onDrawerSlide(View drawerView, float slideOffset) {
                 super.onDrawerSlide(drawerView, slideOffset);
-                Log.d("BBT:", "offset" + slideOffset);
+                //Log.d("BBT:", "offset" + slideOffset);
                 if ( slideOffset < 0.6 ) {
                     toolbar.setAlpha(1 - slideOffset);
                 }
