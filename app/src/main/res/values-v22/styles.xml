@@ -1,0 +1,12 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--<style name="AppTheme" parent="android:Theme.Material.Light.DarkActionBar">-->
+    <style name="AppTheme" parent="AppTheme.Base">
+        <item name="android:colorPrimary">@color/primaryColorIndigo</item>
+        <item name="android:colorPrimaryDark">@color/primaryColorIndigoDark</item>
+        <item name="android:colorAccent">@color/accentIndigoColor</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+</resources>

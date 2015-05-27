@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColorIndigo">#3F51B5</color>
+    <color name="primaryColorIndigoDark">#303F9F</color>
+    <color name="accentIndigoColor">#F44336</color>
+    <color name="primaryColor">#FF5722</color>
+    <color name="primaryColorDark">#E64A19</color>
+    <color name="accentColor">#564D4A</color>
+</resources>
